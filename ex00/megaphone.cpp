@@ -4,7 +4,8 @@ int main (int arc, char **arv)
 {
     if (arc == 1)
     {
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" 
+        << std::endl;
         return (1);
     }
     else

@@ -1,4 +1,4 @@
-# include "Phonebook.hpp"
+# include "PhoneBook.hpp"
 # include "Contact.hpp"
 
 std::string tranc_str(std::string str) {
@@ -48,7 +48,13 @@ int check_if_empty_isprint_isnum(std::string &str)
 void get_input(std::string str, std::string &input)
 {
     std::cout << str;
-    std::getline(std::cin, input);
+    if (!std::getline(std::cin, input)) {
+        if (std::cin.eof()) {
+            std::cin.clear();
+            std::cout << "\nEOF detected." << std::endl;
+            exit(0);
+        }
+   }
 }
 
 int get_search_index()

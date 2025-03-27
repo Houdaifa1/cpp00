@@ -1,7 +1,5 @@
-# include "Phonebook.hpp"
+# include "PhoneBook.hpp"
 # include "Contact.hpp"
-
-
 
 int check_if_commande_valid(std::string commande)
 {
@@ -35,7 +33,7 @@ void add_operation(std::string &first_name, std::string &last_name,
 }
 
 
-void search_operation(Phonebook &phonebook)
+void search_operation(PhoneBook &phonebook)
 {
     if (phonebook.get_contactcount() == 0)
     {
@@ -52,7 +50,7 @@ void search_operation(Phonebook &phonebook)
     phonebook.displaycontactdetails(idx);
 }
 
-void do_operation(int oper_num, Phonebook &phonebook)
+void do_operation(int oper_num, PhoneBook &phonebook)
 {
     std::string first_name;
     std::string last_name;
@@ -82,7 +80,7 @@ void do_operation(int oper_num, Phonebook &phonebook)
 
 int main()
 {
-    Phonebook phonebook;
+    PhoneBook phonebook;
     std::string commande;
 
     while (1)
